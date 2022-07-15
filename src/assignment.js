@@ -13,10 +13,32 @@ const assignment = {};
  * @param {Array} arrayOfNumbers the array of numbers to sum
  * @returns number the sum of the numbers
  */
+
+// Given starts here
+// function sumOfNumbers(arrayOfNumbers) {
+//     return arrayOfNumbers.length;
+// }
+// Given ends here 
+
+
+    
+
+// My code starts here
+let numbers = [1,2,3,4,5,6];
 function sumOfNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  let result = 0
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+      result = result + arrayOfNumbers[i]
+    }  
+  return result
 }
-// assignment.sumOfNumbers = sumOfNumbers;
+
+let actualSumOfArray = sumOfNumbers(numbers)
+console.log (`The sum of the array is : ${actualSumOfArray}`)
+assignment.sumOfNumbers = sumOfNumbers;
+// my code ends here
+
+
 
 /**
  * Challenge - 2
@@ -27,10 +49,18 @@ function sumOfNumbers(arrayOfNumbers) {
  * @param {Array} arrayOfNumbers the array containing even or non-even numbers
  * @returns number the count of even numbers
  */
+
 function countEvenNumbers(arrayOfNumbers) {
-    return arrayOfNumbers.length;
+  let Counts = 0;
+  for(let value of arrayOfNumbers){
+    if(value % 2 === 0){
+      Counts = Counts + 1
+    }
+  }
+    return Counts;
 }
-// assignment.countEvenNumbers = countEvenNumbers;
+assignment.countEvenNumbers = countEvenNumbers;
+
 
 /**
  * Challenge - 3
